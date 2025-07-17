@@ -517,9 +517,9 @@ int main(int argc, char** argv) {
 		SDL_TEXTUREACCESS_STREAMING,
 		SCREEN_WIDTH, SCREEN_HEIGHT);
 
-	charset = SDL_LoadBMP("./cs8x8.bmp");
+	charset = SDL_LoadBMP("Images/cs8x8.bmp");
 	if (charset == NULL) {
-		printf("SDL_LoadBMP(cs8x8.bmp) error: %s\n", SDL_GetError());
+		printf("SDL_LoadBMP(Images/cs8x8.bmp) error: %s\n", SDL_GetError());
 		SDL_FreeSurface(screen);
 		SDL_DestroyTexture(scrtex);
 		SDL_DestroyWindow(window);
@@ -529,58 +529,58 @@ int main(int argc, char** argv) {
 	};
 	SDL_SetColorKey(charset, true, 0x000000);
 
-	mario_right = SDL_LoadBMP("./mario.bmp");
+	mario_right = SDL_LoadBMP("Images/mario.bmp");
 	if (mario_right == NULL) {
-		printf("SDL_LoadBMP(mario.bmp) error: %s\n", SDL_GetError());
+		printf("SDL_LoadBMP(Images/mario.bmp) error: %s\n", SDL_GetError());
 		SDL_Quit();
 		return 1;
 	};
 
-	main_platform = SDL_LoadBMP("./main_platform.bmp");
+	main_platform = SDL_LoadBMP("Images/main_platform.bmp");
 	if (main_platform == NULL) {
-		printf("SDL_LoadBMP(main_platform.bmp) error: %s\n", SDL_GetError());
+		printf("SDL_LoadBMP(Images/main_platform.bmp) error: %s\n", SDL_GetError());
 		SDL_Quit();
 		return 1;
 	};
 
-	medium_platform = SDL_LoadBMP("./medium_platform.bmp");
+	medium_platform = SDL_LoadBMP("Images/medium_platform.bmp");
 	if (medium_platform == NULL) {
-		printf("SDL_LoadBMP(medium_platform.bmp) error: %s\n", SDL_GetError());
+		printf("SDL_LoadBMP(Images/medium_platform.bmp) error: %s\n", SDL_GetError());
 		SDL_Quit();
 		return 1;
 	};
 
-	small_platform = SDL_LoadBMP("./small_platform.bmp");
+	small_platform = SDL_LoadBMP("Images/small_platform.bmp");
 	if (small_platform == NULL) {
-		printf("SDL_LoadBMP(small_platform.bmp) error: %s\n", SDL_GetError());
+		printf("SDL_LoadBMP(Images/small_platform.bmp) error: %s\n", SDL_GetError());
 		SDL_Quit();
 		return 1;
 	};
 
-	top_platform = SDL_LoadBMP("./top_platform.bmp");
+	top_platform = SDL_LoadBMP("Images/top_platform.bmp");
 	if (top_platform == NULL) {
-		printf("SDL_LoadBMP(top_platform.bmp) error: %s\n", SDL_GetError());
+		printf("SDL_LoadBMP(Images/top_platform.bmp) error: %s\n", SDL_GetError());
 		SDL_Quit();
 		return 1;
 	};
 
-	final_platform = SDL_LoadBMP("./final_platform.bmp");
+	final_platform = SDL_LoadBMP("Images/final_platform.bmp");
 	if (final_platform == NULL) {
-		printf("SDL_LoadBMP(final_platform.bmp) error: %s\n", SDL_GetError());
+		printf("SDL_LoadBMP(Images/final_platform.bmp) error: %s\n", SDL_GetError());
 		SDL_Quit();
 		return 1;
 	};
 
-	drabina = SDL_LoadBMP("./drabina.bmp");
+	drabina = SDL_LoadBMP("Images/drabina.bmp");
 	if (drabina == NULL) {
-		printf("SDL_LoadBMP(drabina.bmp) error: %s\n", SDL_GetError());
+		printf("SDL_LoadBMP(Images/drabina.bmp) error: %s\n", SDL_GetError());
 		SDL_Quit();
 		return 1;
 	};
 
-	barrels = SDL_LoadBMP("./barrel_top.bmp");
+	barrels = SDL_LoadBMP("Images/barrel_top.bmp");
 	if (barrels == NULL) {
-		printf("SDL_LoadBMP(barrel_top.bmp) error: %s\n", SDL_GetError());
+		printf("SDL_LoadBMP(Images/barrel_top.bmp) error: %s\n", SDL_GetError());
 		SDL_Quit();
 		return 1;
 	};
@@ -602,25 +602,25 @@ int main(int argc, char** argv) {
 	
 	const Uint8* keys;
 
-	SDL_Surface* mario_l = SDL_LoadBMP("mario_left.bmp");
+	SDL_Surface* mario_l = SDL_LoadBMP("Images/mario_left.bmp");
 	SDL_Texture* texture_run = SDL_CreateTextureFromSurface(renderer, mario_l);
 
-	SDL_Surface* run_r = SDL_LoadBMP("run_right.bmp");
+	SDL_Surface* run_r = SDL_LoadBMP("Images/run_right.bmp");
 	SDL_Texture* texture_run_right = SDL_CreateTextureFromSurface(renderer, run_r);
 
-	SDL_Surface* run_l = SDL_LoadBMP("run_left.bmp");
+	SDL_Surface* run_l = SDL_LoadBMP("Images/run_left.bmp");
 	SDL_Texture* texture_run_left = SDL_CreateTextureFromSurface(renderer, run_l);
 
-	SDL_Surface* jump_r = SDL_LoadBMP("jump_right.bmp");
+	SDL_Surface* jump_r = SDL_LoadBMP("Images/jump_right.bmp");
 	SDL_Texture* texture_jump_right = SDL_CreateTextureFromSurface(renderer, jump_r);
 
-	SDL_Surface* jump_l = SDL_LoadBMP("jump_left.bmp");
+	SDL_Surface* jump_l = SDL_LoadBMP("Images/jump_left.bmp");
 	SDL_Texture* texture_jump_left = SDL_CreateTextureFromSurface(renderer, jump_l);
 
-	SDL_Surface* m_ladder = SDL_LoadBMP("m_ladder.bmp");
+	SDL_Surface* m_ladder = SDL_LoadBMP("Images/m_ladder.bmp");
 	SDL_Texture* texture_m_ladder = SDL_CreateTextureFromSurface(renderer, m_ladder);
 
-	SDL_Surface* d_kong = SDL_LoadBMP("donkey_kong_animation.bmp");
+	SDL_Surface* d_kong = SDL_LoadBMP("Images/donkey_kong_animation.bmp");
 	SDL_Texture* texture_d_kong = SDL_CreateTextureFromSurface(renderer, d_kong);
 
 	while (!quit) {
